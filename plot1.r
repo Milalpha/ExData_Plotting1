@@ -11,7 +11,8 @@ if(!file.exists("exdata-data-household_power_consumption.zip")) {
 
 # Read the file
 rawdata <- read.table(file, header=T, sep=";", na.strings="?")
-dim(rd)
+print(object.size(rawdata), units = "Mb")
+dim(rawdata)
 summary(rawdata)
 class("rawdata$Date")
 class("rawdata$Time")
